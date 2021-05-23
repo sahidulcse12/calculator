@@ -12,47 +12,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <title>Calculator</title>
 </head>
 
 <body>
 
-    <div id="container">
-        <div id="calculator">
-            <div id="result">
-                <div id="history">
-                    <p id="history-value"></p>
-                </div>
-                <div id="output">
-                    <p id="out-value">81</p>
-                </div>
-            </div>
-            <div id="keyboard">
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
-                <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
 
-                <button class="number" id="7">7</button>
-                <button class="number" id="8">8</button>
-                <button class="number" id="9">9</button>
-                <button class="operator" id="*">&times;</button>
-                <button class="number" id="4">4</button>
-                <button class="number" id="5">5</button>
-                <button class="number" id="6">6</button>
-                <button class="operator" id="-">-</button>
-                <button class="number" id="1">1</button>
-                <button class="number" id="2">2</button>
-                <button class="number" id="3">3</button>
-                <button class="operator" id="+">+</button>
-                <button class="empty" id="empty"></button>
-                <button class="number" id="0">0</button>
-                <button class="empty" id="empty"></button>
-                <button class="operator" id="=">=</button>
+    <div class="calculator">
+        <form name="form">
+            <input id="inp" type="text" value="" class="form-control main-bar" name="display" placeholder="0">
+
+            <div class="button-area">
+
+                <div class="line">
+                    <input type="button" value="7" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="8" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="9" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="*" name="btn" class="btn btn-warning" onclick="calculate(this.value)">
+                </div>
+
+                <div class="line">
+                    <input type="button" value="4" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="5" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="6" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="+" name="btn" class="btn btn-warning" onclick="calculate(this.value)">
+                </div>
+
+                <div class="line">
+                    <input type="button" value="1" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="2" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="3" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="-" name="btn" class="btn btn-warning" onclick="calculate(this.value)">
+                </div>
+
+                <div class="line">
+                    <input type="button" value="0" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="00" name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="." name="btn" class="btn btn-primary" onclick="calculate(this.value)">
+                    <input type="button" value="/" name="btn" class="btn btn-warning" onclick="calculate(this.value)">
+                </div>
+
+                <div class="last">
+                    <input type="text" value="C" name="btn" class="btn btn-warning" onclick="display.value=null">
+                    <input type="text" value="=" name="btn" class="btn btn-warning" onclick="display.value=eval(display.value)">
+                </div>
 
             </div>
-        </div>
+        </form>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
     <script src="script.js"></script>
